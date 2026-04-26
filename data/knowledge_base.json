@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "topic": "Phishing Attacks",
+    "content": "Phishing is a social engineering attack where attackers impersonate legitimate entities to steal sensitive information like credentials, credit cards, or personal data. Common indicators: suspicious sender addresses, urgent/threatening language, requests for credentials, poor grammar/spelling, mismatched URLs, unexpected attachments. Types include spear phishing (targeted), whaling (targeting executives), and vishing (voice phishing). Prevention: verify sender identity through separate channels, hover over links to check actual URLs, use 2FA/MFA, implement email filtering and SPF/DKIM/DMARC, conduct security awareness training, never click suspicious links or download unexpected attachments.",
+    "category": "Social Engineering"
+  },
+  {
+    "id": 2,
+    "topic": "Social Engineering Tactics",
+    "content": "Social engineering manipulates people into divulging confidential information or performing actions that compromise security. Techniques include pretexting (creating false scenarios), baiting (offering something enticing), quid pro quo (promising benefits for information), tailgating (physical following), and impersonation. Attackers exploit trust, authority, urgency, and fear. Defense: verify identities independently, question unusual requests especially involving money or credentials, implement strict access controls, train employees to recognize manipulation tactics, establish verification procedures for sensitive requests, use challenge questions, and foster a security-conscious culture where questioning is encouraged.",
+    "category": "Social Engineering"
+  },
+  {
+    "id": 3,
+    "topic": "SQL Injection (SQLi)",
+    "content": "SQL Injection exploits vulnerabilities in database queries by inserting malicious SQL code through user inputs. Attackers can bypass authentication, extract sensitive data, modify/delete records, or execute administrative operations. Common in login forms, search boxes, and URL parameters. Detection: look for SQL error messages, unusual database queries, unexpected data access patterns. Prevention: use parameterized queries/prepared statements (NEVER concatenate user input), implement input validation and sanitization, apply least privilege to database accounts, use stored procedures, enable WAF (Web Application Firewall), perform regular code reviews and penetration testing, escape special characters, and implement proper error handling that doesn't reveal database structure.",
+    "category": "OWASP Top 10"
+  },
+  {
+    "id": 4,
+    "topic": "Cross-Site Scripting (XSS)",
+    "content": "XSS allows attackers to inject malicious scripts (usually JavaScript) into web pages viewed by other users. Three types: Stored XSS (persistent, saved in database), Reflected XSS (immediate, via URL parameters), and DOM-based XSS (client-side). Impacts include session hijacking, credential theft, defacement, malware distribution. Prevention: validate and sanitize ALL user inputs, encode output data (HTML entity encoding), implement Content Security Policy (CSP) headers, use HTTPOnly and Secure flags on cookies, avoid innerHTML (use textContent), implement input length limits, use modern frameworks with built-in XSS protection (React, Angular), and conduct regular security testing.",
+    "category": "OWASP Top 10"
+  },
+  {
+    "id": 5,
+    "topic": "Cross-Site Request Forgery (CSRF)",
+    "content": "CSRF tricks authenticated users into executing unwanted actions on web applications where they're logged in. Attacker crafts malicious requests that leverage the victim's active session. Common targets: fund transfers, email changes, password resets. Prevention: implement anti-CSRF tokens (synchronizer tokens), use SameSite cookie attribute, require re-authentication for sensitive actions, validate HTTP Referer header, use custom request headers for AJAX, implement CAPTCHA for critical operations, and educate users about staying logged out of sensitive sites when browsing.",
+    "category": "OWASP Top 10"
+  },
+  {
+    "id": 6,
+    "topic": "Broken Authentication",
+    "content": "Broken authentication occurs when authentication mechanisms are implemented incorrectly, allowing attackers to compromise passwords, keys, or session tokens. Issues include weak password policies, credential stuffing, session fixation, exposed session IDs, lack of MFA. Prevention: implement multi-factor authentication (MFA), enforce strong password policies (length, complexity, no common passwords), use secure session management (random session IDs, timeout, regenerate after login), implement account lockout after failed attempts, use HTTPS for all authentication, hash passwords with strong algorithms (bcrypt, Argon2), never expose session IDs in URLs, implement CAPTCHA, and monitor for suspicious login patterns.",
+    "category": "OWASP Top 10"
+  },
+  {
+    "id": 7,
+    "topic": "Sensitive Data Exposure",
+    "content": "Sensitive data exposure occurs when applications don't properly protect sensitive information like passwords, credit cards, health records, or personal data. Common causes: transmitting data in clear text, weak encryption, storing sensitive data unnecessarily, improper key management. Prevention: classify data by sensitivity, encrypt data at rest (AES-256) and in transit (TLS 1.2+), use strong encryption algorithms, implement proper key management (rotate keys, use HSM), don't store sensitive data unless necessary, mask/tokenize credit cards and PII, disable autocomplete on sensitive forms, implement secure deletion, and comply with regulations (GDPR, PCI-DSS, HIPAA).",
+    "category": "OWASP Top 10"
+  },
+  {
+    "id": 8,
+    "topic": "XML External Entity (XXE) Injection",
+    "content": "XXE attacks exploit vulnerable XML processors that parse external entity references. Attackers can read local files, perform SSRF attacks, cause DoS, or execute remote code. Common in SOAP web services, file uploads, and API endpoints accepting XML. Prevention: disable XML external entity processing in all XML parsers, use less complex data formats like JSON when possible, implement input validation, update XML processors, use allow-lists for XML schemas, and implement proper error handling that doesn't reveal system information.",
+    "category": "OWASP Top 10"
+  },
+  {
+    "id": 9,
+    "topic": "Insecure Deserialization",
+    "content": "Insecure deserialization occurs when untrusted data is used to abuse application logic, execute arbitrary code, or perform injection attacks. Common in Java, PHP, Python applications using serialization. Impacts include remote code execution, privilege escalation, and DoS. Prevention: avoid deserializing untrusted data, implement integrity checks (digital signatures), isolate deserialization in low-privilege environments, log deserialization exceptions and failures, restrict deserialization to specific classes (allow-listing), use simple data formats like JSON instead of native serialization, and monitor for deserialization activity.",
+    "category": "OWASP Top 10"
+  },
+  {
+    "id": 10,
+    "topic": "Security Misconfiguration",
+    "content": "Security misconfiguration is the most common vulnerability, occurring when security settings are not properly defined, implemented, or maintained. Examples: default credentials, unnecessary features enabled, verbose error messages revealing system info, unpatched systems, insecure cloud storage. Prevention: implement secure configuration baselines, remove unnecessary features/services, change all default credentials, keep systems patched and updated, implement least privilege, use security headers (CSP, HSTS, X-Frame-Options), disable directory listing, implement proper error handling, use automated configuration scanning, and maintain security configuration documentation.",
+    "category": "OWASP Top 10"
+  },
+  {
+    "id": 11,
+    "topic": "Brute Force Attacks",
+    "content": "Brute force attacks systematically try many password combinations to gain unauthorized access. Indicators: multiple failed login attempts from same IP, sequential login attempts, unusual login times/locations, dictionary word attempts. Types include credential stuffing (using leaked credentials), password spraying (trying common passwords across many accounts). Prevention: implement account lockout after N failed attempts, use progressive delays, require CAPTCHA after failures, enforce strong password policies, implement MFA, monitor and alert on suspicious login patterns, use rate limiting, implement IP blocking/geo-blocking, and educate users about password security.",
+    "category": "Authentication"
+  },
+  {
+    "id": 12,
+    "topic": "Multi-Factor Authentication (MFA)",
+    "content": "MFA requires multiple verification factors: something you know (password), something you have (token, phone), something you are (biometric). Significantly reduces account compromise risk even if passwords are stolen. Types: SMS codes (least secure), authenticator apps (TOTP), hardware tokens (YubiKey), biometrics, push notifications. Best practices: use app-based or hardware MFA (avoid SMS), implement backup codes, require MFA for privileged accounts, use adaptive MFA based on risk, educate users about MFA fatigue attacks, and have account recovery procedures.",
+    "category": "Authentication"
+  },
+  {
+    "id": 13,
+    "topic": "Privilege Escalation",
+    "content": "Privilege escalation occurs when attackers gain higher access levels than authorized. Vertical escalation: user to admin. Horizontal escalation: user to another user. Common techniques: exploiting misconfigurations, vulnerable software, weak permissions, sudo misuse, kernel exploits. Detection: monitor sudo usage, admin account access, unusual permission changes, new privileged accounts, scheduled task modifications. Prevention: principle of least privilege, regular access reviews, patch systems promptly, use separate admin accounts, implement PAM (Privileged Access Management), monitor privileged operations, disable unnecessary services, and use application allow-listing.",
+    "category": "MITRE ATT&CK"
+  },
+  {
+    "id": 14,
+    "topic": "Password Security Best Practices",
+    "content": "Strong passwords are critical for security. Requirements: minimum 12-16 characters, mix of uppercase, lowercase, numbers, symbols, no dictionary words, no personal information, unique per account. Use passphrases (4+ random words) for memorability. Never reuse passwords across sites. Prevention: use password managers (1Password, Bitwarden, LastPass), enable MFA everywhere possible, check if passwords were breached (haveibeenpwned.com), change passwords if breach suspected, avoid password hints, don't share passwords, use password generators, and implement password expiration for sensitive accounts.",
+    "category": "Authentication"
+  },
+  {
+    "id": 15,
+    "topic": "Man-in-the-Middle (MITM) Attacks",
+    "content": "MITM attacks intercept communication between two parties, allowing attackers to eavesdrop or modify data. Common on public WiFi, compromised routers, or through ARP spoofing, DNS spoofing, SSL stripping. Attackers can steal credentials, session tokens, sensitive data. Prevention: use HTTPS/TLS for all communications, verify SSL certificates, avoid public WiFi for sensitive operations, use VPN on untrusted networks, implement certificate pinning in apps, use HSTS headers, enable DNSSEC, monitor for certificate anomalies, and educate users about secure browsing.",
+    "category": "Network Security"
+  },
+  {
+    "id": 16,
+    "topic": "Denial of Service (DoS) and DDoS",
+    "content": "DoS attacks overwhelm systems to make them unavailable to legitimate users. DDoS uses multiple sources (botnets). Types: volumetric (bandwidth exhaustion), protocol (SYN floods), application layer (HTTP floods). Impacts: service downtime, revenue loss, reputation damage. Prevention: implement rate limiting, use traffic filtering and scrubbing, deploy CDN and load balancers, use DDoS protection services (Cloudflare, Akamai), implement connection limits, use SYN cookies, monitor traffic patterns, have incident response plan, use anycast routing, and maintain excess capacity.",
+    "category": "Availability"
+  },
+  {
+    "id": 17,
+    "topic": "Port Scanning and Network Reconnaissance",
+    "content": "Port scanning identifies open ports and services on target systems, often the first step in attacks. Tools: nmap, masscan. Techniques: TCP connect, SYN scan, UDP scan, version detection. Detection: monitor for unusual connection patterns, multiple connection attempts, sequential port access. Prevention: close unnecessary ports, use firewalls to restrict access, implement IDS/IPS, use port knocking, disable unnecessary services, implement network segmentation, monitor firewall logs, and use honeypots to detect reconnaissance.",
+    "category": "Network Security"
+  },
+  {
+    "id": 18,
+    "topic": "Firewall Configuration and Best Practices",
+    "content": "Firewalls control network traffic based on security rules. Types: packet filtering, stateful inspection, application layer, next-gen (NGFW). Best practices: default deny (allow-list approach), segment networks (DMZ, internal, management), use both network and host firewalls, log all denied traffic, regularly review rules, remove unused rules, document all changes, implement egress filtering, use geo-blocking where appropriate, enable IPS features, and conduct regular firewall audits.",
+    "category": "Network Security"
+  },
+  {
+    "id": 19,
+    "topic": "VPN Security and Remote Access",
+    "content": "VPNs create encrypted tunnels for secure remote access. Protocols: OpenVPN (most secure), WireGuard (modern, fast), IPSec, L2TP. Security considerations: use strong encryption (AES-256), implement MFA for VPN access, use certificate-based authentication, enable kill switch, avoid free VPNs (privacy concerns), keep VPN software updated, use split tunneling carefully, implement VPN access logging, restrict VPN access by role, and monitor for unusual VPN usage patterns.",
+    "category": "Network Security"
+  },
+  {
+    "id": 20,
+    "topic": "Network Segmentation and Zero Trust",
+    "content": "Network segmentation divides networks into isolated zones to limit lateral movement. Zero Trust assumes no implicit trust, verifying every access request. Implementation: use VLANs, separate critical systems, implement micro-segmentation, use software-defined networking, enforce least privilege access, require authentication for all resources, implement continuous verification, monitor all traffic, use identity-aware proxies, and apply defense in depth. Benefits: contain breaches, reduce attack surface, improve compliance, and enable granular access control.",
+    "category": "Network Security"
+  },
+  {
+    "id": 21,
+    "topic": "Ransomware Attacks and Response",
+    "content": "Ransomware encrypts victim data and demands payment for decryption. Common variants: WannaCry, Ryuk, REvil, LockBit. Delivery: phishing emails, RDP exploitation, software vulnerabilities. Prevention: maintain offline backups (3-2-1 rule), patch systems promptly, use email filtering, implement application allow-listing, disable macros, train users, use EDR solutions, segment networks. If infected: isolate infected systems immediately, don't pay ransom (no guarantee), report to authorities, restore from backups, analyze attack vector, and improve defenses.",
+    "category": "Malware"
+  },
+  {
+    "id": 22,
+    "topic": "Trojan Horses and Backdoors",
+    "content": "Trojans disguise malicious code as legitimate software. Types: backdoor trojans (remote access), banking trojans (steal financial data), downloader trojans (install more malware), RATs (Remote Access Trojans). Common delivery: fake software, email attachments, drive-by downloads. Detection: unusual network traffic, unexpected processes, new services, registry changes. Prevention: download software only from official sources, verify digital signatures, use antivirus/EDR, implement application control, monitor outbound connections, keep software updated, and use sandboxing for unknown files.",
+    "category": "Malware"
+  },
+  {
+    "id": 23,
+    "topic": "Spyware and Keyloggers",
+    "content": "Spyware secretly monitors user activity and collects information. Keyloggers record keystrokes to steal passwords and sensitive data. Types: software keyloggers, hardware keyloggers, screen capture tools. Indicators: slow performance, unexpected network activity, new browser toolbars, changed settings. Prevention: use antivirus/anti-spyware, avoid downloading from untrusted sources, keep software updated, use virtual keyboards for sensitive inputs, implement application allow-listing, monitor for suspicious processes, use EDR solutions, and physically secure devices.",
+    "category": "Malware"
+  },
+  {
+    "id": 24,
+    "topic": "Rootkits and Persistent Threats",
+    "content": "Rootkits hide malicious activity by modifying the operating system. Types: user-mode, kernel-mode, bootkit, firmware rootkits. Extremely difficult to detect and remove. Indicators: hidden processes/files, disabled security tools, unusual system behavior. Detection: use rootkit scanners (GMER, TDSSKiller), boot from clean media, check integrity of system files, monitor for kernel modifications. Prevention: keep systems patched, use secure boot, implement UEFI protection, use TPM, avoid running as administrator, use EDR with behavioral analysis, and maintain clean system images for comparison.",
+    "category": "Malware"
+  },
+  {
+    "id": 25,
+    "topic": "Advanced Persistent Threats (APT)",
+    "content": "APTs are prolonged, targeted attacks by sophisticated adversaries (often nation-states). Characteristics: stealthy, persistent, well-resourced, multi-stage, custom malware. Phases: reconnaissance, initial compromise, establish foothold, escalate privileges, lateral movement, data exfiltration, maintain presence. Defense: implement defense in depth, use threat intelligence, deploy EDR/XDR, monitor for anomalies, segment networks, use deception technology (honeypots), conduct threat hunting, implement zero trust, maintain incident response capability, and assume breach mentality.",
+    "category": "Threats"
+  },
+  {
+    "id": 26,
+    "topic": "Encryption Fundamentals",
+    "content": "Encryption protects data confidentiality by converting plaintext to ciphertext. Symmetric encryption (AES, ChaCha20): same key for encryption/decryption, fast, used for bulk data. Asymmetric encryption (RSA, ECC): public/private key pairs, slower, used for key exchange and digital signatures. Best practices: use AES-256 for symmetric, RSA-2048+ or ECC for asymmetric, use authenticated encryption (GCM mode), implement proper key management, use TLS 1.2+ for transport, avoid deprecated algorithms (DES, MD5, SHA-1), use strong random number generation, and implement key rotation.",
+    "category": "Cryptography"
+  },
+  {
+    "id": 27,
+    "topic": "TLS/SSL and HTTPS Security",
+    "content": "TLS (Transport Layer Security) encrypts data in transit between client and server. HTTPS is HTTP over TLS. Best practices: use TLS 1.2 minimum (prefer TLS 1.3), disable older protocols (SSL 2.0, 3.0, TLS 1.0, 1.1), use strong cipher suites, implement HSTS (HTTP Strict Transport Security), use valid certificates from trusted CAs, implement certificate pinning in apps, enable OCSP stapling, use forward secrecy, monitor certificate expiration, and implement CAA DNS records.",
+    "category": "Cryptography"
+  },
+  {
+    "id": 28,
+    "topic": "Digital Signatures and PKI",
+    "content": "Digital signatures provide authentication, integrity, and non-repudiation using asymmetric cryptography. PKI (Public Key Infrastructure) manages digital certificates. Components: Certificate Authority (CA), Registration Authority, certificate repository, revocation lists (CRL/OCSP). Use cases: code signing, email signing (S/MIME), document signing, SSL/TLS certificates. Best practices: protect private keys (use HSM), verify certificate chains, check revocation status, use appropriate key sizes, implement certificate lifecycle management, and maintain offline root CAs.",
+    "category": "Cryptography"
+  },
+  {
+    "id": 29,
+    "topic": "Incident Response Process",
+    "content": "Incident response handles security breaches systematically. Phases: 1) Preparation (plans, tools, training), 2) Detection and Analysis (identify incident, assess scope), 3) Containment (short-term: isolate, long-term: patches), 4) Eradication (remove threat), 5) Recovery (restore systems), 6) Post-Incident (lessons learned, improve defenses). Best practices: maintain incident response plan, establish CSIRT team, define roles/responsibilities, practice with tabletop exercises, maintain communication channels, document everything, preserve evidence, and conduct post-mortems.",
+    "category": "Incident Response"
+  },
+  {
+    "id": 30,
+    "topic": "Digital Forensics and Evidence Collection",
+    "content": "Digital forensics investigates security incidents and collects evidence. Principles: maintain chain of custody, preserve original evidence, document everything, use write blockers, create forensic images. Analysis areas: file system, memory, network traffic, logs, registry. Tools: EnCase, FTK, Autopsy, Volatility, Wireshark. Process: identify evidence sources, preserve volatile data (memory), create forensic copies, analyze artifacts, document findings, and present results. Legal considerations: admissibility, proper handling, expert testimony.",
+    "category": "Forensics"
+  },
+  {
+    "id": 31,
+    "topic": "Log Management and SIEM",
+    "content": "Security Information and Event Management (SIEM) aggregates and analyzes logs from multiple sources. Capabilities: log collection, normalization, correlation, alerting, dashboards, compliance reporting. Use cases: detect anomalies, investigate incidents, meet compliance, threat hunting. Best practices: collect logs from all critical systems, use centralized logging, implement log retention policies, protect log integrity, use correlation rules, tune alerts to reduce false positives, integrate threat intelligence, and conduct regular log reviews.",
+    "category": "Monitoring"
+  },
+  {
+    "id": 32,
+    "topic": "GDPR Compliance",
+    "content": "General Data Protection Regulation (GDPR) protects EU citizens' personal data. Key requirements: lawful basis for processing, data minimization, purpose limitation, consent management, right to access/erasure/portability, data breach notification (72 hours), privacy by design, DPO appointment, DPIA for high-risk processing. Penalties: up to 4% of global revenue or \u20ac20M. Compliance: map data flows, implement privacy controls, maintain records of processing, conduct DPIAs, establish breach response procedures, train staff, and implement technical measures (encryption, pseudonymization).",
+    "category": "Compliance"
+  },
+  {
+    "id": 33,
+    "topic": "PCI-DSS Requirements",
+    "content": "Payment Card Industry Data Security Standard (PCI-DSS) protects cardholder data. 12 requirements across 6 goals: 1) Secure network (firewalls, no default passwords), 2) Protect cardholder data (encryption, truncation), 3) Vulnerability management (antivirus, secure code), 4) Access control (need-to-know, unique IDs, physical security), 5) Monitor networks (logging, monitoring), 6) Security policy. Compliance levels based on transaction volume. Requirements: never store CVV, encrypt transmission, maintain secure systems, restrict access, and conduct regular testing.",
+    "category": "Compliance"
+  },
+  {
+    "id": 34,
+    "topic": "Security Frameworks (NIST, ISO 27001)",
+    "content": "Security frameworks provide structured approaches to cybersecurity. NIST Cybersecurity Framework: Identify, Protect, Detect, Respond, Recover. ISO 27001: international standard for ISMS (Information Security Management System), includes risk assessment, controls, continuous improvement. Benefits: systematic approach, demonstrate due diligence, improve security posture, meet compliance requirements. Implementation: conduct gap analysis, define scope, assess risks, select controls, implement policies/procedures, train staff, monitor effectiveness, and pursue certification.",
+    "category": "Governance"
+  },
+  {
+    "id": 35,
+    "topic": "Cloud Security Best Practices",
+    "content": "Cloud security requires shared responsibility between provider and customer. Key areas: identity and access management (use IAM roles, MFA, least privilege), data protection (encrypt at rest and in transit, use KMS), network security (security groups, NACLs, VPC), monitoring (CloudTrail, CloudWatch, GuardDuty), compliance (understand certifications), configuration management (avoid public S3 buckets, disable unused services). Best practices: use infrastructure as code, implement CSPM tools, enable logging, conduct regular audits, use cloud-native security services, and implement backup/DR.",
+    "category": "Cloud Security"
+  },
+  {
+    "id": 36,
+    "topic": "Container and Kubernetes Security",
+    "content": "Container security addresses unique risks in containerized environments. Concerns: vulnerable images, insecure configurations, runtime threats, orchestration security. Best practices: scan images for vulnerabilities, use minimal base images, don't run as root, use read-only file systems, implement network policies, use secrets management, enable RBAC, implement pod security policies, use admission controllers, monitor runtime behavior, keep Kubernetes updated, and use service mesh for encryption.",
+    "category": "Cloud Security"
+  },
+  {
+    "id": 37,
+    "topic": "Secure Coding Practices",
+    "content": "Secure coding prevents vulnerabilities during development. Principles: validate all inputs, encode outputs, use parameterized queries, implement proper authentication/authorization, handle errors securely, use secure libraries, avoid hardcoded secrets, implement least privilege, use security headers, enable logging. OWASP Secure Coding Practices: input validation, output encoding, authentication/password management, session management, access control, cryptographic practices, error handling, data protection, communication security, and system configuration.",
+    "category": "Development"
+  },
+  {
+    "id": 38,
+    "topic": "DevSecOps and Security Testing",
+    "content": "DevSecOps integrates security into DevOps pipelines. Practices: shift left (early security testing), automate security testing, use SAST (static analysis), DAST (dynamic analysis), SCA (software composition analysis), implement security gates, conduct code reviews, use dependency scanning, implement secrets scanning, perform penetration testing, use infrastructure as code scanning, and maintain security champions. Tools: SonarQube, Snyk, OWASP ZAP, Burp Suite, GitGuardian. Goal: find and fix vulnerabilities early when cheaper to remediate.",
+    "category": "Development"
+  },
+  {
+    "id": 39,
+    "topic": "Zero-Day Vulnerabilities",
+    "content": "Zero-day exploits target unknown vulnerabilities before patches are available. Characteristics: no known fix, high value to attackers, often used in targeted attacks. Defense strategies: defense in depth (multiple security layers), network segmentation (limit blast radius), intrusion detection (behavioral analysis), application allow-listing, rapid patch management, virtual patching (WAF rules), threat intelligence, and assume breach mentality. Mitigation: isolate affected systems, implement compensating controls, monitor for exploitation indicators, and apply patches immediately when available.",
+    "category": "Vulnerabilities"
+  },
+  {
+    "id": 40,
+    "topic": "Supply Chain Attacks",
+    "content": "Supply chain attacks compromise trusted vendors or software to reach targets. Examples: SolarWinds, Kaseya, NotPetya. Attack vectors: compromised software updates, malicious dependencies, hardware implants, compromised credentials. Prevention: vet third-party vendors, implement vendor risk management, use software composition analysis, verify digital signatures, implement network segmentation, monitor for anomalies, use zero trust architecture, maintain software bill of materials (SBOM), and implement least privilege for third-party access.",
+    "category": "Threats"
+  },
+  {
+    "id": 41,
+    "topic": "Mobile Device Security",
+    "content": "Mobile security addresses smartphones and tablets. Threats: malicious apps, phishing, insecure WiFi, lost/stolen devices, OS vulnerabilities. Best practices: enable device encryption, use strong passcodes/biometrics, enable remote wipe, keep OS updated, download apps only from official stores, review app permissions, avoid public WiFi or use VPN, enable find my device, implement MDM for corporate devices, use containerization for work data, and educate users about mobile threats.",
+    "category": "Mobile Security"
+  },
+  {
+    "id": 42,
+    "topic": "IoT Security Challenges",
+    "content": "IoT devices present unique security challenges: limited resources, long lifecycles, weak authentication, lack of updates, insecure defaults. Common issues: default credentials, unencrypted communications, vulnerable firmware, lack of physical security. Attacks: Mirai botnet, camera hijacking, smart home exploitation. Security measures: change default credentials, segment IoT networks, disable unnecessary features, implement network monitoring, use strong authentication, encrypt communications, keep firmware updated, conduct security assessments, and consider security in procurement.",
+    "category": "IoT Security"
+  },
+  {
+    "id": 43,
+    "topic": "Vulnerability Management",
+    "content": "Vulnerability management identifies, evaluates, and remediates security weaknesses. Process: 1) Discovery (asset inventory, scanning), 2) Assessment (vulnerability scanning, penetration testing), 3) Prioritization (CVSS scoring, risk-based), 4) Remediation (patching, configuration changes, compensating controls), 5) Verification (rescan, validation). Best practices: maintain asset inventory, scan regularly, prioritize based on risk and exploitability, establish SLAs for patching, use automated tools, track metrics, and integrate with change management.",
+    "category": "Operations"
+  },
+  {
+    "id": 44,
+    "topic": "Penetration Testing",
+    "content": "Penetration testing simulates real attacks to identify vulnerabilities. Types: black box (no knowledge), white box (full knowledge), gray box (partial knowledge). Phases: reconnaissance, scanning, exploitation, maintaining access, reporting. Scope: network, web applications, wireless, physical, social engineering. Methodologies: OWASP Testing Guide, PTES, OSSTMM. Best practices: define clear scope and rules of engagement, obtain written authorization, use qualified testers, test in isolated environments when possible, document findings with evidence, provide remediation guidance, and retest after fixes.",
+    "category": "Testing"
+  },
+  {
+    "id": 45,
+    "topic": "Threat Intelligence",
+    "content": "Threat intelligence provides actionable information about threats. Types: strategic (trends, risk), tactical (TTPs), operational (campaigns), technical (IoCs). Sources: open source (OSINT), commercial feeds, ISACs, government, internal telemetry. Use cases: proactive defense, incident response, risk assessment, security awareness. Implementation: define requirements, collect from multiple sources, analyze and enrich, disseminate to stakeholders, integrate with security tools (SIEM, firewall, IDS), and measure effectiveness. Frameworks: MITRE ATT&CK, Diamond Model, Cyber Kill Chain.",
+    "category": "Intelligence"
+  },
+  {
+    "id": 46,
+    "topic": "Backup and Disaster Recovery",
+    "content": "Backup and DR ensure business continuity after incidents. 3-2-1 rule: 3 copies of data, 2 different media types, 1 offsite copy. Backup types: full, incremental, differential. DR metrics: RTO (Recovery Time Objective), RPO (Recovery Point Objective). Best practices: automate backups, test restores regularly, encrypt backups, store offsite/offline (ransomware protection), document procedures, maintain DR plan, conduct DR drills, use immutable backups, implement versioning, and monitor backup success.",
+    "category": "Business Continuity"
+  },
+  {
+    "id": 47,
+    "topic": "Security Awareness Training",
+    "content": "Security awareness training educates users about cybersecurity threats and best practices. Topics: phishing recognition, password security, social engineering, physical security, data handling, incident reporting, mobile security, acceptable use. Delivery: onboarding training, annual refreshers, phishing simulations, newsletters, posters, lunch-and-learns. Best practices: make training engaging and relevant, use real-world examples, conduct simulated attacks, measure effectiveness, provide immediate feedback, reward good behavior, make reporting easy, and foster security culture.",
+    "category": "Awareness"
+  },
+  {
+    "id": 48,
+    "topic": "Artificial Intelligence in Cybersecurity",
+    "content": "AI enhances cybersecurity through automation and pattern recognition. Applications: anomaly detection, threat hunting, malware analysis, UEBA (User and Entity Behavior Analytics), automated response, phishing detection, vulnerability assessment. Benefits: process vast data, identify subtle patterns, reduce false positives, enable proactive defense. Challenges: adversarial AI, false positives, explainability, data quality requirements. Best practices: combine AI with human expertise, validate AI decisions, use diverse training data, monitor for bias, and maintain human oversight for critical decisions.",
+    "category": "Advanced"
+  },
+  {
+    "id": 49,
+    "topic": "Blockchain Security",
+    "content": "Blockchain provides distributed, immutable ledgers but has unique security considerations. Threats: 51% attacks, smart contract vulnerabilities, private key theft, exchange hacks, consensus attacks. Smart contract risks: reentrancy, integer overflow, access control issues. Security measures: secure key management (hardware wallets, multi-sig), audit smart contracts, use established frameworks, implement proper access controls, monitor for anomalies, use reputable exchanges, enable 2FA, and understand consensus mechanism security properties.",
+    "category": "Advanced"
+  },
+  {
+    "id": 50,
+    "topic": "Quantum Computing and Post-Quantum Cryptography",
+    "content": "Quantum computers threaten current cryptography. Shor's algorithm can break RSA and ECC. Harvest now, decrypt later attacks collect encrypted data for future decryption. Post-quantum cryptography develops quantum-resistant algorithms. NIST standardization: lattice-based, hash-based, code-based, multivariate cryptography. Preparation: inventory cryptographic assets, plan migration strategy, implement crypto-agility, monitor NIST standards, test post-quantum algorithms, and prioritize long-term sensitive data protection.",
+    "category": "Advanced"
+  }
+]

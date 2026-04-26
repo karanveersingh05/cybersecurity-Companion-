@@ -1,0 +1,12 @@
+﻿build/
+dist/
+*.exe
+*.pkg
+.agent/
+.gsd/
+.gemini/
+venv/
+__pycache__/
+PROJECT_RULES.md
+GSD-STYLE.md
+model_capabilities.yaml

