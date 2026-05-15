@@ -10,6 +10,35 @@ echo =============================================
 echo.
 
 :: -----------------------------------------------
+:: Step 0 - Ensure Virtual Environment Exists
+:: -----------------------------------------------
+echo [0/5] Checking for virtual environment...
+set RECREATE_VENV=0
+if not exist "venv\Scripts\python.exe" (
+    set RECREATE_VENV=1
+) else (
+    venv\Scripts\python.exe --version >nul 2>&1
+    if !ERRORLEVEL! NEQ 0 (
+        echo  Existing virtual environment is broken (likely copied from another PC).
+        rmdir /s /q venv
+        set RECREATE_VENV=1
+    )
+)
+
+if !RECREATE_VENV!==1 (
+    echo  Creating virtual environment...
+    python -m venv venv
+    if %ERRORLEVEL% NEQ 0 (
+        echo  ERROR: Failed to create virtual environment. Ensure Python is installed and in PATH.
+        pause ^& exit /b 1
+    )
+    echo  [OK] Virtual environment created.
+) else (
+    echo  [OK] Virtual environment found and is valid.
+)
+echo.
+
+:: -----------------------------------------------
 :: Step 1 – Clean PyQt environment
 :: -----------------------------------------------
 echo [1/5] Removing mismatched PyQt6 packages...
