@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d12">
+  <meta name="description" content="Cybersecurity Companion: a privacy-first desktop security platform with local machine learning, a RAG security assistant, and a hardened Chromium browser. B.Tech final-year dissertation by Karan Veer Singh and team.">
+  <meta property="og:title" content="Cybersecurity Companion — Security, Kept Local">
+  <meta property="og:description" content="A privacy-first desktop cybersecurity platform combining local ML, retrieval-augmented assistance, protected browsing, and security training.">
+  <meta property="og:type" content="website">
+  <title>Cybersecurity Companion — Security, Kept Local</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Cybersecurity Companion home">
+      <span class="brand-mark"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M18 3.5 29 8v8.5c0 7.2-4.7 12.4-11 16-6.3-3.6-11-8.8-11-16V8l11-4.5Z"/><path d="m12.4 18.1 3.7 3.7 7.8-8"/></svg></span>
+      <span class="brand-name">CYBERSECURITY <b>COMPANION</b></span>
+    </a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#platform">Platform</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#my-role">My contribution</a>
+      <a href="#research">Research</a>
+      <a class="nav-cta" href="https://github.com/karanveersingh05/cybersecurity-Companion-" target="_blank" rel="noreferrer">View source <span>↗︎</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> B.TECH FINAL-YEAR DISSERTATION <span class="eyebrow-line"></span> 2025—2026</div>
+        <h1>Security intelligence.<br><span>Kept local.</span></h1>
+        <p class="hero-lede">A privacy-first desktop cybersecurity platform designed to bring practical threat detection, contextual AI assistance, and safer browsing to organisations that cannot afford to send sensitive data to the cloud.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#platform">Explore the system <span>↓</span></a>
+          <a class="button button-ghost" href="https://github.com/karanveersingh05/cybersecurity-Companion-" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.1-1.5 6.1-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.6s-1.2-.4-3.7 1.4a12.8 12.8 0 0 0-6.7 0C5.8.2 4.6.6 4.6.6a4.8 4.8 0 0 0-.1 3.6 5.2 5.2 0 0 0-1.4 3.6c0 5.2 3.1 6.4 6.1 6.7a3.4 3.4 0 0 0-.9 2.6V22"/></svg> GitHub repository <span>↗︎</span></a>
+        </div>
+        <div class="hero-footnote"><span class="tiny-lock">⌑</span> Local-first by design <i></i> Built for constrained hardware <i></i> Human-centred security</div>
+      </div>
+      <div class="hero-visual" aria-label="Illustrative interface concept showing local security analysis">
+        <div class="visual-topline"><span><b class="window-dot red"></b><b class="window-dot amber"></b><b class="window-dot green"></b></span><span class="mono">COMPANION / LOCAL NODE</span><span class="live-state"><b></b> ON-DEVICE</span></div>
+        <div class="console-head"><div><span class="mono label-muted">SYSTEM POSTURE</span><h2>Defence in depth</h2></div><div class="shield-orbit"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="31"/><circle cx="40" cy="40" r="22"/><path d="M40 15 56 22v13c0 12-7 20-16 25-9-5-16-13-16-25V22l16-7Z"/><path d="m32 39 6 6 12-14"/></svg></div></div>
+        <div class="console-grid">
+          <div class="console-card phishing"><div class="console-card-top"><span class="mini-icon">↗︎</span><span class="mono">01 / URL INTELLIGENCE</span><span class="card-check">✓</span></div><strong>Phishing detection</strong><div class="signal-line"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="card-foot"><span>Random Forest</span><span>LOCAL INFERENCE</span></div></div>
+          <div class="console-card rag"><div class="console-card-top"><span class="mini-icon">✳</span><span class="mono">02 / KNOWLEDGE</span><span class="card-check">✓</span></div><strong>RAG security assistant</strong><div class="rag-visual"><div class="rag-node">Query</div><div class="rag-connector">······</div><div class="rag-node accent">FAISS</div><div class="rag-connector">······</div><div class="rag-node">Answer</div></div><div class="card-foot"><span>Semantic retrieval</span><span>OFFLINE</span></div></div>
+          <div class="console-card browser-card"><div class="console-card-top"><span class="mini-icon">⌘</span><span class="mono">03 / BROWSER CONTROL</span><span class="card-check">✓</span></div><strong>Protected browsing</strong><div class="browser-lines"><span class="browser-address"><b></b> https://intranet.local/</span><span class="browser-row"><b></b> Navigation inspected</span><span class="browser-row"><b></b> Downloads require consent</span></div><div class="card-foot"><span>Chromium / QtWebEngine</span><span>GUARDED</span></div></div>
+          <div class="console-card privacy-card"><div class="privacy-lock"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></svg></div><div><strong>Your data stays here.</strong><p>Analysis runs on the device, not a remote scoring API.</p></div><span class="privacy-check">✓</span></div>
+        </div>
+        <div class="console-bottom"><span><b></b> WORKERS READY</span><span>PYTHON · PYQT6 · SQLITE</span><span class="mono">LOCAL / 00</span></div>
+        <div class="visual-stamp">SYSTEM<br>OVERVIEW <span>01</span></div>
+      </div>
+    </section>
+
+    <section class="metrics-strip section-wrap" aria-label="Project at a glance">
+      <div class="metric"><span class="metric-value">05</span><span class="metric-label">Collaborators</span></div>
+      <div class="metric"><span class="metric-value">07</span><span class="metric-label">Core desktop tabs*</span></div>
+      <div class="metric"><span class="metric-value">02</span><span class="metric-label">ML detection engines</span></div>
+      <div class="metric"><span class="metric-value">01</span><span class="metric-label">Unified desktop platform</span></div>
+      <p class="metric-note">*As described in the dissertation architecture; feature availability may differ in the public snapshot.</p>
+    </section>
+
+    <section class="intro-section section-wrap" id="platform">
+      <div class="section-kicker">01 / THE PROBLEM</div>
+      <div class="intro-grid">
+        <div><h2>Security tools should not require you to <span>give away the evidence.</span></h2></div>
+        <div class="intro-body"><p>Modern security products often depend on cloud analysis. But a URL can contain a private identifier. A system log can expose internal infrastructure. A browsing session can reveal more than a user intended.</p><p>Cybersecurity Companion explores a different trade-off: bring useful detection and contextual guidance onto the endpoint, keep sensitive inputs local, and make the results understandable to the person who must act on them.</p><div class="callout"><span class="callout-mark">↳</span><p><b>The design premise</b><br>Local processing, explainable signals, explicit user consent, and a lighter operational footprint.</p></div></div>
+      </div>
+    </section>
+
+    <section class="platform-section section-wrap">
+      <div class="section-heading"><div><div class="section-kicker">02 / ONE PLATFORM, MULTIPLE LAYERS</div><h2>From detection to <span>better decisions.</span></h2></div><p>Rather than treating cybersecurity as a single alert, the project connects technical controls with practical guidance and user learning.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card feature-large"><div class="feature-index">01</div><div class="feature-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="13" cy="13" r="8"/><path d="m19 19 7 7M9 13l3 3 5-6"/></svg></div><div class="feature-content"><span class="mono feature-label">SUPERVISED CLASSIFICATION</span><h3>Phishing URL intelligence</h3><p>Inspects URL structure using engineered signals such as length, special-character density, direct IP usage, suspicious keywords, subdomain depth, HTTPS presence, path depth, and query complexity. A local Random Forest model turns those features into a risk assessment.</p><div class="tag-row"><span>Random Forest</span><span>8 URL features</span><span>Local scoring</span></div></div><div class="feature-side-code"><span>URL → FEATURES</span><b>→</b><span>RISK SCORE</span></div></article>
+        <article class="feature-card"><div class="feature-index">02</div><div class="feature-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 25V7M5 25h23"/><path d="m8 20 5-6 4 3 8-10"/><circle cx="25" cy="7" r="2"/></svg></div><span class="mono feature-label">UNSUPERVISED DETECTION</span><h3>Log anomaly analysis</h3><p>Transforms log text with TF-IDF and uses Isolation Forest to flag outliers. Heuristic patterns add context for events such as failed logins, suspicious commands, and possible injection attempts.</p><div class="tag-row"><span>TF-IDF</span><span>Isolation Forest</span></div></article>
+        <article class="feature-card"><div class="feature-index">03</div><div class="feature-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4 27 9v8c0 6-5 10-11 13C10 27 5 23 5 17V9l11-5Z"/><path d="M11 16h10M16 11v10"/></svg></div><span class="mono feature-label">CONTROLLED WEB ACCESS</span><h3>Hardened Chromium browser</h3><p>A PyQt6-WebEngine browser checks navigation, inspects page structure and security signals, identifies known trackers, and intercepts downloads for explicit approval instead of silently trusting a file request.</p><div class="tag-row"><span>QtWebEngine</span><span>Download consent</span><span>Tracker checks</span></div></article>
+        <article class="feature-card"><div class="feature-index">04</div><div class="feature-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 6h22v16H14l-7 5v-5H5z"/><path d="M10 12h12M10 16h8"/></svg></div><span class="mono feature-label">RETRIEVAL-AUGMENTED GENERATION</span><h3>AI security assistant</h3><p>A local knowledge base, semantic embeddings, and FAISS retrieval help answer cybersecurity questions with relevant context. The goal is practical explanation without sending a user's question to a cloud chatbot.</p><div class="tag-row"><span>all-MiniLM-L6-v2</span><span>FAISS</span><span>Offline retrieval</span></div></article>
+        <article class="feature-card"><div class="feature-index">05</div><div class="feature-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 7h20v18H6zM10 12h12M10 16h7"/><path d="m12 21 3 2 5-5"/></svg></div><span class="mono feature-label">HUMAN-CENTRED DEFENCE</span><h3>Security training & progress</h3><p>An interactive quiz and XP progression system turns safe choices into repeatable habits. Scores and learning progress are persisted locally in SQLite.</p><div class="tag-row"><span>Interactive quizzes</span><span>XP & levels</span><span>SQLite</span></div></article>
+        <article class="feature-card"><div class="feature-index">06</div><div class="feature-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4 27 10v12l-11 6L5 22V10l11-6Z"/><path d="m10 16 4 4 8-9"/></svg></div><span class="mono feature-label">MODEL GOVERNANCE</span><h3>Model auditor</h3><p>A dedicated audit module is designed to inspect model artifacts and prediction consistency, with drift and robustness checks intended to make model health more visible.</p><div class="tag-row"><span>Integrity checks</span><span>Drift analysis</span></div></article>
+      </div>
+    </section>
+
+    <section class="architecture-section" id="architecture">
+      <div class="section-wrap">
+        <div class="section-heading architecture-heading"><div><div class="section-kicker">03 / SYSTEM ARCHITECTURE</div><h2>Heavy analysis.<br><span>Lightweight interface.</span></h2></div><p>The application separates the desktop interface from intensive analysis. Background workers process the workload, then communicate results back through Qt signals, helping keep the interface responsive on modest hardware.</p></div>
+        <div class="architecture-panel">
+          <div class="architecture-toolbar"><span class="mono">EXECUTION MODEL / 01</span><span class="architecture-legend"><i></i> User interface <i></i> Analysis layer <i></i> Local storage</span></div>
+          <div class="architecture-flow">
+            <div class="arch-node arch-user"><span class="arch-node-number">A</span><b>User action</b><small>URL · logs · question · navigation</small></div>
+            <div class="arch-arrow"><span>input</span><b>↓</b></div>
+            <div class="arch-node arch-ui"><span class="arch-node-number">B</span><b>PyQt6 interface</b><small>Tabs · controls · security feedback</small></div>
+            <div class="arch-arrow"><span>dispatch</span><b>↓</b></div>
+            <div class="arch-worker-wrap"><div class="worker-caption mono">BACKGROUND WORKERS / QTHREADPOOL</div><div class="worker-nodes"><div class="arch-node"><span class="arch-node-number">C1</span><b>Random Forest</b><small>URL classification</small></div><div class="arch-node"><span class="arch-node-number">C2</span><b>Isolation Forest</b><small>Log outliers</small></div><div class="arch-node arch-highlight"><span class="arch-node-number">C3</span><b>RAG + FAISS</b><small>Semantic retrieval</small></div><div class="arch-node"><span class="arch-node-number">C4</span><b>Browser analysis</b><small>DOM · trackers · downloads</small></div></div></div>
+            <div class="arch-arrow return-arrow"><span>results via Qt signals</span><b>↑</b></div>
+            <div class="arch-node arch-result"><span class="arch-node-number">D</span><b>Human-readable result</b><small>Risk assessment · contextual answer · consent prompt</small></div>
+            <div class="storage-row"><div class="storage-pill"><span>▤</span> SQLite · local records</div><div class="storage-pill"><span>⌕</span> Knowledge base · vector index</div><div class="storage-pill"><span>◇</span> Model artifacts · local inference</div></div>
+          </div>
+          <div class="architecture-note"><span>ENGINEERING PRINCIPLE</span><p>CPU-bound work should not monopolise the UI thread. Worker tasks return through signals; persistent application state stays on the local machine.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rag-section section-wrap">
+      <div class="rag-copy"><div class="section-kicker">04 / THE RAG ASSISTANT</div><h2>Answers grounded in a <span>local knowledge base.</span></h2><p>My contribution centred on the AI assistant and browser experience. For the assistant, the key engineering challenge was not simply adding a chat window. It was building a retrieval path that could find relevant cybersecurity material locally and return it in a useful form without depending on a hosted LLM API.</p><p>The dissertation describes a compact embedding model paired with FAISS nearest-neighbour retrieval. The retrieved material supplies context for the response, helping keep the assistant tied to the project's curated knowledge base.</p><div class="rag-callout"><span class="callout-mark">↳</span><p><b>RAG, in plain English</b><br>Search trusted reference material first, then use the retrieved context to shape the answer. Retrieval helps grounding, but it does not guarantee that every answer is correct.</p></div></div>
+      <div class="rag-workflow">
+        <div class="workflow-title"><span class="mono">LOCAL RETRIEVAL PIPELINE</span><span class="workflow-badge">NO CLOUD API IN THE DESCRIBED FLOW</span></div>
+        <div class="workflow-step"><span class="workflow-number">01</span><div><b>Ask a question</b><p>“How can I recognise a phishing attempt?”</p></div><span class="workflow-icon">⌁</span></div>
+        <div class="workflow-connector"></div>
+        <div class="workflow-step"><span class="workflow-number">02</span><div><b>Create a semantic embedding</b><p>all-MiniLM-L6-v2 represents the query as a vector.</p></div><span class="workflow-icon">⠿</span></div>
+        <div class="workflow-connector"></div>
+        <div class="workflow-step"><span class="workflow-number">03</span><div><b>Retrieve relevant passages</b><p>FAISS searches for the top three matching knowledge chunks.</p></div><span class="workflow-icon">⌕</span></div>
+        <div class="workflow-connector"></div>
+        <div class="workflow-step workflow-final"><span class="workflow-number">04</span><div><b>Return contextual guidance</b><p>Relevant material is presented as a readable security response.</p></div><span class="workflow-icon">✓</span></div>
+        <div class="workflow-foot"><span>EMBEDDINGS</span><b>→</b><span>SIMILARITY SEARCH</span><b>→</b><span>CONTEXTUAL RESPONSE</span></div>
+      </div>
+    </section>
+
+    <section class="browser-section">
+      <div class="section-wrap browser-grid">
+        <div class="browser-visual">
+          <div class="browser-window">
+            <div class="browser-chrome"><span class="window-dot red"></span><span class="window-dot amber"></span><span class="window-dot green"></span><div class="address-bar"><span>⌑</span> https://portal.example.local</div><span class="browser-menu">•••</span></div>
+            <div class="browser-page">
+              <div class="browser-page-nav"><span class="mock-logo">portal<span>.</span></span><span>Dashboard　 Reports　 Help</span><span class="mock-avatar">KV</span></div>
+              <div class="mock-page-content"><div class="mock-kicker">WORKSPACE / OVERVIEW</div><div class="mock-headline">Welcome back.</div><div class="mock-skeleton sk-wide"></div><div class="mock-skeleton sk-mid"></div><div class="mock-stat-row"><div><span>ACTIVITY</span><b>Updated</b></div><div><span>ACCESS</span><b>Protected</b></div></div><div class="mock-skeleton sk-wide"></div></div>
+              <div class="browser-security-panel"><div class="security-panel-title"><span class="small-shield">✓</span><div><b>Companion security panel</b><small>Page analysis</small></div><span class="panel-dots">•••</span></div><div class="security-result"><span class="result-check">✓</span><div><b>Navigation inspected</b><small>URL assessment completed locally</small></div></div><div class="security-result"><span class="result-check">✓</span><div><b>Page signals reviewed</b><small>Structural checks and known trackers</small></div></div><div class="download-warning"><span>!</span><div><b>Download protection</b><small>A file request requires your decision.</small><div class="mock-actions"><span>DENY</span><span>REVIEW</span></div></div></div></div>
+            </div>
+            <div class="browser-bottom"><span><b></b> PROTECTED SESSION</span><span>ANALYSIS IS ILLUSTRATIVE</span></div>
+          </div>
+          <div class="browser-caption mono">CONCEPTUAL UI RECONSTRUCTION · NOT A LIVE SCREENSHOT</div>
+        </div>
+        <div class="browser-copy"><div class="section-kicker">05 / THE BROWSER MODULE</div><h2>A browser that asks a second question: <span>should this be trusted?</span></h2><p>The Chromium-based module was designed to make security checks part of the browsing workflow, rather than a separate tool users must remember to open.</p><ul class="check-list"><li><span>01</span><div><b>Inspect before and during navigation</b><p>URL checks and page-level signals help surface suspicious destinations.</p></div></li><li><span>02</span><div><b>Put downloads behind a decision</b><p>Intercepted download requests can be reviewed, accepted, or cancelled by the user.</p></div></li><li><span>03</span><div><b>Make privacy signals visible</b><p>Known tracker checks and security-header inspection contribute to a clearer page assessment.</p></div></li><li><span>04</span><div><b>Keep analysis off the UI thread</b><p>Background workers and signal-based updates help the interface remain responsive.</p></div></li></ul></div>
+      </div>
+    </section>
+
+    <section class="my-role-section section-wrap" id="my-role">
+      <div class="section-kicker">06 / MY CONTRIBUTION</div>
+      <div class="role-heading"><h2>My focus was where <span>AI meets the user.</span></h2><p>Cybersecurity Companion was a five-person B.Tech capstone developed at Amity University Rajasthan. My principal focus was the RAG-based AI security assistant and the Chromium browser experience, with an emphasis on making the underlying intelligence useful inside the application.</p></div>
+      <div class="role-grid">
+        <article class="role-card role-primary"><div class="role-top"><span class="role-symbol">✳</span><span class="mono">01 / AI ASSISTANT</span><span class="role-marker">PRIMARY FOCUS</span></div><h3>RAG chatbot & local retrieval</h3><p>Worked on the cybersecurity assistant experience and its local retrieval flow, connecting user questions with semantically relevant material from the curated knowledge base.</p><ul><li>Local semantic search using sentence embeddings</li><li>FAISS-backed retrieval of relevant knowledge chunks</li><li>Contextual answers presented through the desktop interface</li></ul><div class="role-stack"><span>Sentence Transformers</span><span>FAISS</span><span>Python</span></div></article>
+        <article class="role-card"><div class="role-top"><span class="role-symbol">⌘</span><span class="mono">02 / BROWSER</span><span class="role-marker">PRIMARY FOCUS</span></div><h3>Protected browser experience</h3><p>Worked on the embedded browser module that brings page inspection and security controls into the same desktop workflow.</p><ul><li>Chromium integration through PyQt6-WebEngine</li><li>Security analysis panel and page-level checks</li><li>Permission-based download handling and user feedback</li></ul><div class="role-stack"><span>PyQt6</span><span>QtWebEngine</span><span>Security UX</span></div></article>
+        <article class="role-card"><div class="role-top"><span class="role-symbol">↗︎</span><span class="mono">03 / COLLABORATION</span></div><h3>A connected system, not isolated demos</h3><p>The final-year project brought multiple disciplines into one desktop application: ML-based detection, local persistence, secure browsing, user training, and model auditing.</p><ul><li>Five-person cross-functional team</li><li>Engineering report and system-level architecture</li><li>Final-year dissertation, 2025–2026</li></ul><div class="role-stack"><span>Team project</span><span>B.Tech CSE</span><span>Amity University Rajasthan</span></div></article>
+      </div>
+      <div class="team-note"><span class="team-icon">◎</span><p><b>Built as a team.</b> The wider platform also includes phishing detection, log anomaly analysis, model auditing, SQLite persistence, and gamified cybersecurity training. This page distinguishes my primary areas of contribution from the broader team implementation.</p></div>
+    </section>
+
+    <section class="engineering-section">
+      <div class="section-wrap engineering-grid">
+        <div><div class="section-kicker">07 / ENGINEERING DECISIONS</div><h2>Built around the <span>real-world constraints.</span></h2><p class="engineering-intro">The dissertation prioritises usable security on ordinary hardware. The engineering choices reflect that constraint rather than assuming a dedicated GPU cluster or a permanent cloud connection.</p></div>
+        <div class="engineering-list">
+          <article><span class="engineering-num">01</span><div><h3>Local-first data path</h3><p>Threat scoring, retrieval, and application records are designed to remain on-device, reducing the need to transmit sensitive telemetry to external analysis services.</p></div><span class="engineering-mark">↗︎</span></article>
+          <article><span class="engineering-num">02</span><div><h3>Asynchronous workloads</h3><p>Qt worker tasks and signal-based delivery separate expensive analysis from UI rendering, reducing the chance that model work freezes the desktop experience.</p></div><span class="engineering-mark">↗︎</span></article>
+          <article><span class="engineering-num">03</span><div><h3>Software-rendering fallback</h3><p>The design disables hardware acceleration in the described configuration to favour stability on low-specification systems and integrated graphics.</p></div><span class="engineering-mark">↗︎</span></article>
+          <article><span class="engineering-num">04</span><div><h3>Local state and model checks</h3><p>SQLite stores application progress and scan records; the auditor module is intended to make model integrity and changing behaviour more visible.</p></div><span class="engineering-mark">↗︎</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="research-section section-wrap" id="research">
+      <div class="section-heading"><div><div class="section-kicker">08 / DISSERTATION & EVIDENCE</div><h2>Designed, implemented, <span>documented.</span></h2></div><p>The project report records the motivation, design diagrams, implementation choices, validation cases, technology stack, and future scope.</p></div>
+      <div class="research-grid">
+        <article class="research-card"><span class="research-card-number">A / REPORT</span><div class="research-graphic report-graphic"><div class="paper-lines"><b></b><i></i><i></i><i></i><i></i><i></i></div><span>52<br><small>PAGES</small></span></div><h3>B.Tech project dissertation</h3><p>Project objectives, literature survey, architecture, implementation, results and testing, conclusion, and annexures.</p><a href="https://github.com/karanveersingh05/cybersecurity-Companion-/blob/main/PROJECT_EXPLAINED.md" target="_blank" rel="noreferrer">Read the engineering documentation <span>↗︎</span></a></article>
+        <article class="research-card"><span class="research-card-number">B / VALIDATION</span><div class="research-graphic validation-graphic"><div class="validation-row"><b>TC-01</b><span>Trusted-domain path</span><i>PASS</i></div><div class="validation-row"><b>TC-02</b><span>Phishing classification</span><i>PASS</i></div><div class="validation-row"><b>TC-03</b><span>Download interception</span><i>PASS</i></div><div class="validation-row"><b>TC-04</b><span>Training state update</span><i>PASS</i></div></div><h3>Validation matrix</h3><p>The report documents four formal execution scenarios covering trusted navigation, suspicious URL handling, download interception, and gamification state updates.</p><span class="research-meta">DOCUMENTED TEST CASES · NOT AN INDEPENDENT AUDIT</span></article>
+        <article class="research-card"><span class="research-card-number">C / PERFORMANCE</span><div class="research-graphic performance-graphic"><div class="performance-bars"><div><span>Single tab</span><i style="--bar:100%"></i><b>340 MB</b></div><div><span>Companion</span><i style="--bar:37%"></i><b>125 MB</b></div><div><span>5 tabs</span><i style="--bar:100%"></i><b>1.4 GB</b></div><div><span>Companion</span><i style="--bar:29%"></i><b>410 MB</b></div></div></div><h3>Efficiency as a design goal</h3><p>The report compares approximate memory footprints for conventional Chromium and the software-rendered application configuration.</p><span class="research-meta">FIGURES REPORTED IN THE DISSERTATION</span></article>
+      </div>
+      <div class="research-disclaimer"><span>!</span><p><b>How to read these results:</b> Performance values and test outcomes shown here are taken from the project dissertation. They are not presented as independently reproduced benchmark results. The memory comparison is configuration-dependent and should not be treated as a universal browser comparison.</p></div>
+    </section>
+
+    <section class="stack-section">
+      <div class="section-wrap stack-grid"><div><div class="section-kicker">09 / TECHNOLOGY STACK</div><h2>The tools behind <span>the system.</span></h2></div><div class="stack-groups"><div><span>DESKTOP & BROWSER</span><p><b>Python</b><b>PyQt6</b><b>QtWebEngine / Chromium</b></p></div><div><span>MACHINE LEARNING</span><p><b>scikit-learn</b><b>Random Forest</b><b>Isolation Forest</b><b>TF-IDF</b></p></div><div><span>LOCAL AI & RETRIEVAL</span><p><b>Sentence Transformers</b><b>all-MiniLM-L6-v2</b><b>FAISS</b></p></div><div><span>DATA & PACKAGING</span><p><b>SQLite</b><b>NumPy</b><b>Pandas</b><b>PyInstaller</b></p></div></div></div>
+    </section>
+
+    <section class="transparency-section section-wrap">
+      <div class="transparency-mark">i</div><div><div class="section-kicker">A NOTE ON THE PUBLIC REPOSITORY</div><h2>The repository is a <span>project snapshot, not the full product.</span></h2><p>The public GitHub repository contains code and documentation, but it does not fully reproduce the original project environment. Large model artifacts and some implementation assets were omitted, so parts of the public version may be incomplete or non-runnable as-is. This website explains the system as documented in the dissertation; it does not claim that the GitHub snapshot is a complete, turnkey release.</p><p>Security features described in the report are project implementation goals and test claims, not a guarantee that the software is suitable as a production endpoint-protection product. The platform is an academic engineering project and should not replace a professional security stack.</p></div>
+    </section>
+
+    <section class="closing-section">
+      <div class="closing-glow"></div><div class="section-wrap closing-content"><div class="section-kicker">10 / EXPLORE THE PROJECT</div><h2>Make security more local.<br><span>Make it more understandable.</span></h2><p>Cybersecurity Companion is my B.Tech final-year dissertation: a team-built exploration of privacy-preserving security, local AI, and user-centred defence.</p><div class="closing-actions"><a class="button button-primary" href="https://github.com/karanveersingh05/cybersecurity-Companion-" target="_blank" rel="noreferrer">Explore the GitHub repository <span>↗︎</span></a><a class="button button-ghost" href="https://github.com/karanveersingh05/cybersecurity-Companion-/blob/main/README.md" target="_blank" rel="noreferrer">Read project README <span>↗︎</span></a></div><div class="closing-credit">A FINAL-YEAR PROJECT BY <b>KARAN VEER SINGH & TEAM</b><span>AMITY UNIVERSITY RAJASTHAN · 2025—2026</span></div></div>
+    </section>
+  </main>
+
+  <footer class="footer section-wrap"><a class="brand footer-brand" href="#top"><span class="brand-mark"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M18 3.5 29 8v8.5c0 7.2-4.7 12.4-11 16-6.3-3.6-11-8.8-11-16V8l11-4.5Z"/><path d="m12.4 18.1 3.7 3.7 7.8-7"/></svg></span><span class="brand-name">CYBERSECURITY <b>COMPANION</b></span></a><p>Privacy-first security, explored through applied AI.</p><a class="footer-github" href="https://github.com/karanveersingh05/cybersecurity-Companion-" target="_blank" rel="noreferrer">SOURCE CODE ↗︎</a><span class="footer-copy">© 2026 · Academic project presentation</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
